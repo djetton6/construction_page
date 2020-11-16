@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <title>Just Quality Construction</title>
+</head>
+<!-- https://youtu.be/3J-EFMzz94g?t=597 -->
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="img-wrapper">
+                <img src="./assets/photos/placeholderhome.jpg" alt="renovated new home">
+            </div>
+            <div class="banner">
+                <h1>Just Quality HandyMan LLC</h1>
+                <p>Quality You Can Trust</p>
+                <button>See Just Quality Work</button>
+            </div>
+        </header>
+    </div>
+    <script type="text/javascript">
+        const slide = document.getElementById('slide');
+        window.onmousemove = function(e){
+            let x = e.clientX;
+            slide.style.left = x + 'px';
+        }
+    </script>
+</body>
+</html>
