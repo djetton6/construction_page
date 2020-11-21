@@ -1,4 +1,5 @@
 <html lang="en">
+    <!-- https://youtu.be/3J-EFMzz94g?t=1871 -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +20,7 @@
             <div class="line line-1"></div>
             <div class="line line-2"></div>
             <div class="line line-3"></div>
-
+            <span>Close</span>
         </div>
         <header class="header">
             <div class="img-wrapper">
@@ -35,33 +36,86 @@
         <section class="sidebar">
             <ul class="menu">
                 <li class="menu-item">
-                    <a href="#" class="menu-link">Home</a>
+                    <a href="#" class="menu-link" data-content="Home">Home</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="menu-link">Our Work</a>
+                    <a href="#" class="menu-link" data-content="OurWork">Our Work</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="menu-link">Team</a>
+                    <a href="#" class="menu-link" data-content="Team">Team</a>
                 </li>
                 <li class="menu-item">
-                    <a href="#" class="menu-link">Quote</a>
+                    <a href="#" class="menu-link" data-content="Quote">Quote</a>
                 </li>
             </ul>
             <div class="social-media">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
                 <a href="#"><i class="fab fa-instagra-f"></i></a>
                 <a href="#"><i class="fab fa-twitter-f"></i></a>
 
             </div>
         </section>
 
+        <section class="our-work">
+            <div class="section-header">
+                <h1 class="section-heading">Our Work</h1>
+                <div class="underline"></div>
+
+            </div>
+            <div class="w3-container">
+                <h2>Residential</h2>
+                <p>Tabs are perfect for single page web applications, or for web pages capable of displaying different subjects. Click on the links below.</p>
+              </div>
+              
+              <div class="w3-bar w3-black">
+                <button class="w3-bar-item w3-button" onclick="openGallery('Bathroom')">Bathroom</button>
+                <button class="w3-bar-item w3-button" onclick="openGallery('Kitchen')">Kitchen</button>
+                <button class="w3-bar-item w3-button" onclick="openGallery('Cement')">Cement</button>
+                <button class="w3-bar-item w3-button" onclick="openGallery('Plumbing')">Plumbing</button>
+                <button class="w3-bar-item w3-button" onclick="openGallery('Electric')">Electric</button>
+                <button class="w3-bar-item w3-button" onclick="openGallery('Tokyo')">Tokyo</button>
+
+              </div>
+              
+              <div id="Bathroom" class="w3-container city">
+                <h2>Bathroom</h2>
+                <p>Did you know that on average, American homeowners will get back 71 cents back from every dollar they spend on remodeling or updating their bathroom? True, it would be great to get every cent back, but there is no arguing that 71 cents is a significant return on investment.</p>
+              </div>
+              
+              <div id="Kitchen" class="w3-container city" style="display:none">
+                <h2>Kitchen</h2>
+                <p>They say that the kitchen is the heart of the home. And we have to believe it’s true. Whether small or large, the kitchen is the hub of the home. It is where the meals are created – it fuels the bodies, minds and souls of friends and families all over the world.</p> 
+              </div>
+              
+              <div id="Cement" class="w3-container city" style="display:none">
+                <h2>Cement</h2>
+                <p>Concrete is the most used material in the world because of its cheap price and large quantity. It is needless to say concrete is made of cement.</p>
+              </div>
+
+              <div id="Plumbing" class="w3-container city" style="display:none">
+                <h2>Plumbing</h2>
+                <p>Plumbing is as important to your residential or commercial building as oxygen is to the body. Plumbing services ensure that water comes in and out of your house properly</p>
+              </div>
+
+              <div id="Flooring" class="w3-container city" style="display:none">
+                <h2>Flooring</h2>
+                <p>Since the floor is underfoot and takes up so much real estate in any space, it has a significant impact on the aesthetic of your home. If you want to change the look of a room, change the floors. </p>
+              </div>
+            
+        </section>
+
     </div>
-    <script type="text/javascript">
-        const slide = document.getElementById('slide');
-        window.onmousemove = function(e){
-            let x = e.clientX;
-            slide.style.left = x + 'px';
-        }
+    <script src="./script.js"></script>
+    
+<script>
+    function openGallery(constructionType) {
+      var i;
+      var x = document.getElementsByClassName("city");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      document.getElementById(constructionType).style.display = "block";  
+    }
     </script>
 </body>
 </html>
